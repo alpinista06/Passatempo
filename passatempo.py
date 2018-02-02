@@ -13,10 +13,10 @@ class passatempo(GridLayout):
         super(passatempo, self).__init__()
         self.labels = []
         for indice in range(1,16):
-            self.labels.append(Label(text=str(indice)))
+            self.labels.append(Button(text=str(indice)))
         
         for label in self.labels:
-            self.add_widget(label)
+            self.add_widget(Button)
         
     def label_clicada(self, instance, value):
             print('User click on', value)
