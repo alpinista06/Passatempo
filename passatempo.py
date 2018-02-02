@@ -11,16 +11,16 @@ class passatempo(GridLayout):
     def __init__(self):
         self.cols = 4
         super(passatempo, self).__init__()
-        self.labels = []
+        self.buttons = []
         for indice in range(1,16):
-            self.labels.append(Button(text=str(indice)))
+            self.buttons.append(Button(text=str(indice)))
         
-        for label in self.labels:
-            self.add_widget(Button)
+        for button in self.buttons:
+            self.add_widget(Button())
         
-    def label_clicada(self, instance, value):
+    def button_clicado(self, instance, value):
             print('User click on', value)
-            
+'''            
     def on_touch_move(self, touch):
         touch.ud['line'].points += [touch.x, touch.y]
         
@@ -31,7 +31,7 @@ class passatempo(GridLayout):
             d = 30.
             Ellipse(pos=(touch.x - d / 2, touch.y - d / 2), size=(d, d))
             touch.ud['line'] = Line(points=(touch.x, touch.y))
-       
+ '''      
 class passaApp(App):    
     def build(self):    
         return passatempo()  
